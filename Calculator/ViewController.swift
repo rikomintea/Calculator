@@ -26,6 +26,7 @@ class ViewController: UIViewController {
 
     
     @IBAction func select0(){
+        number1 = number1*10 + 0
         label.text = String(number1)
     }
     
@@ -90,7 +91,11 @@ class ViewController: UIViewController {
         }else if ope == 3{
             number3 = number2 * number1
         }else if ope == 4{
+            if number1 == 0{
+                return
+            }else{
             number3 = number2 / number1
+            }
         }
         label.text = String(number3)
     }
@@ -130,6 +135,7 @@ class ViewController: UIViewController {
         number1 = 0
         number3 = 0
         label.text = String(number3)
+        
 
     }
     
